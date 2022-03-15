@@ -9,8 +9,7 @@ namespace TestTask.Cars
         [SerializeField] private Vector3 _carRotation;
         [SerializeField] private Transform _carContainer;
     
-        private CarSwitcher _carSwitcher;
-    
+        private ICarSwitcher _carSwitcher;
         public ICarSwitcher CarSwitcher 
         {
             get
