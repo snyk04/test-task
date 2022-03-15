@@ -123,6 +123,36 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &36046935
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 36046936}
+  m_Layer: 0
+  m_Name: CarContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &36046936
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36046935}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 442342164}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &186098559
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,7 +306,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1160519697}
   - {fileID: 1776998874}
   - {fileID: 1102414517}
   m_Father: {fileID: 1119460033}
@@ -310,7 +339,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 186098560}
-  - {fileID: 1246429392}
+  - {fileID: 36046936}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -528,7 +557,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 423377907}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1102414518
 MonoBehaviour:
@@ -581,10 +610,11 @@ Transform:
   m_Children:
   - {fileID: 423377907}
   - {fileID: 422267852}
+  - {fileID: 1465621401}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1160519696
+--- !u!1 &1206959628
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -592,107 +622,76 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1160519697}
-  - component: {fileID: 1160519698}
+  - component: {fileID: 1206959629}
+  - component: {fileID: 1206959630}
   m_Layer: 0
-  m_Name: RCC_FixedCamera
+  m_Name: CarSpawner
   m_TagString: Untagged
-  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1160519697
+--- !u!4 &1206959629
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1160519696}
+  m_GameObject: {fileID: 1206959628}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 423377907}
+  m_Father: {fileID: 1465621401}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1160519698
+--- !u!114 &1206959630
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1160519696}
+  m_GameObject: {fileID: 1206959628}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 329bfd12784c4c24f834463bc2995114, type: 3}
+  m_Script: {fileID: 11500000, guid: f017094c92844df59de91f0797949264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistance: 50
-  minimumFOV: 20
-  maximumFOV: 60
-  canTrackNow: 0
---- !u!4 &1246429392 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2703436007806216462, guid: f13fe6a4833fcbd46b226a3c65c99822, type: 3}
-  m_PrefabInstance: {fileID: 1484006109}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1484006109
-PrefabInstance:
+  _carPrefabs:
+  - {fileID: 837724309891431223, guid: a08790ed527a63948a829ccc9a1572f5, type: 3}
+  - {fileID: 2703436007806216463, guid: f13fe6a4833fcbd46b226a3c65c99822, type: 3}
+  _carContainer: {fileID: 36046936}
+--- !u!1 &1465621400
+GameObject:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 442342164}
-    m_Modifications:
-    - target: {fileID: 2703436007806216462, guid: f13fe6a4833fcbd46b226a3c65c99822, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2703436007806216462, guid: f13fe6a4833fcbd46b226a3c65c99822, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.43
-      objectReference: {fileID: 0}
-    - target: {fileID: 2703436007806216462, guid: f13fe6a4833fcbd46b226a3c65c99822, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2703436007806216462, guid: f13fe6a4833fcbd46b226a3c65c99822, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 3.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 2703436007806216462, guid: f13fe6a4833fcbd46b226a3c65c99822, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.38268328
-      objectReference: {fileID: 0}
-    - target: {fileID: 2703436007806216462, guid: f13fe6a4833fcbd46b226a3c65c99822, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2703436007806216462, guid: f13fe6a4833fcbd46b226a3c65c99822, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.9238796
-      objectReference: {fileID: 0}
-    - target: {fileID: 2703436007806216462, guid: f13fe6a4833fcbd46b226a3c65c99822, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2703436007806216462, guid: f13fe6a4833fcbd46b226a3c65c99822, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2703436007806216462, guid: f13fe6a4833fcbd46b226a3c65c99822, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -225
-      objectReference: {fileID: 0}
-    - target: {fileID: 2703436007806216462, guid: f13fe6a4833fcbd46b226a3c65c99822, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2703436007806216463, guid: f13fe6a4833fcbd46b226a3c65c99822, type: 3}
-      propertyPath: m_Name
-      value: SilviaS15
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f13fe6a4833fcbd46b226a3c65c99822, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1465621401}
+  m_Layer: 0
+  m_Name: Custom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1465621401
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465621400}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1206959629}
+  m_Father: {fileID: 1119460033}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1698977028
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,7 +753,7 @@ Transform:
   m_Children:
   - {fileID: 1698977029}
   m_Father: {fileID: 423377907}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1776998875
 MonoBehaviour:
@@ -772,7 +771,7 @@ MonoBehaviour:
   playerCar: {fileID: 0}
   thisCam: {fileID: 0}
   pivot: {fileID: 1698977028}
-  cameraMode: 3
+  cameraMode: 0
   lastCameraMode: 0
   useTopCameraMode: 1
   useHoodCameraMode: 0
