@@ -62,6 +62,7 @@ namespace TestTask.Cars
     
                 var carController = _cars[i].GetComponent<RCC_CarControllerV3>();
                 RCC.SetControl(carController, false);
+                carController.engineRunning = false;
                 _cars[i].SetActive(false);
             }
         }
