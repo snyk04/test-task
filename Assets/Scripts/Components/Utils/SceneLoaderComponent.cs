@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 namespace TestTask.Utils
 {
-    public sealed class SceneLoader : MonoBehaviour
+    public sealed class SceneLoaderComponent : MonoBehaviour
     {
         public void LoadScene(int sceneId)
         {

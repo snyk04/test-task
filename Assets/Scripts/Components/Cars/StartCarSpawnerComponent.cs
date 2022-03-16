@@ -2,7 +2,7 @@
 
 namespace TestTask.Cars
 {
-    public sealed class CarSpawner : MonoBehaviour
+    public sealed class StartCarSpawnerComponent : MonoBehaviour
     {
         [SerializeField] private GameObject[] _carPrefabs;
         [SerializeField] private Transform _carContainer;

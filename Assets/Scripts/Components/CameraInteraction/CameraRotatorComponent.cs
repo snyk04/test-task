@@ -2,7 +2,7 @@
 
 namespace TestTask.CameraInteraction
 {
-    public sealed class CameraRotator : MonoBehaviour
+    public sealed class CameraRotatorComponent : MonoBehaviour
     {
         [SerializeField] private Camera _camera;
         [SerializeField] private Vector3 _pointToAlign;

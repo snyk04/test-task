@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace TestTask.Game
 {
-    public sealed class FinishGameStopper : MonoBehaviour
+    public sealed class FinishGameStopperComponent : MonoBehaviour
     {
         [Header("References")]
         [SerializeField] private TriggerableComponent _triggerableComponent;

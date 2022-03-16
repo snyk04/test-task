@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace TestTask.Cars
 {
-    public sealed class CarSwitcherVisual : MonoBehaviour
+    public sealed class CarSwitcherVisualComponent : MonoBehaviour
     {
         [Header("References")] 
         [SerializeField] private CarSwitcherComponent _carSwitcherComponent;

@@ -2,7 +2,7 @@
 
 namespace TestTask.Cars
 {
-    public sealed class CarSelector : MonoBehaviour
+    public sealed class CarSelectorComponent : MonoBehaviour
     {
         [SerializeField] private CarSwitcherComponent _carSwitcherComponent;
 
