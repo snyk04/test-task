@@ -43,7 +43,8 @@ namespace TestTask.Cars
             _cars[carId].SetActive(true);
             
             CurrentCarId = carId;
-            
+            CarIdTransmitter.CarId = carId;
+
             OnCarSwitch?.Invoke();
         }
         private void SpawnCars()
