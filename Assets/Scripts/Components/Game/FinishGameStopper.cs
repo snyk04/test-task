@@ -1,7 +1,8 @@
 ﻿using TestTask.Cars;
+using TestTask.Objects;
 using UnityEngine;
 
-namespace TestTask
+namespace TestTask.Game
 {
     public sealed class FinishGameStopper : MonoBehaviour
     {

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TestTask
+namespace TestTask.Objects
 {
     public sealed class TriggerableComponent : MonoBehaviour
     {

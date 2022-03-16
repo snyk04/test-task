@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace TestTask
+namespace TestTask.Objects
 {
     public interface ITriggerable
     {
