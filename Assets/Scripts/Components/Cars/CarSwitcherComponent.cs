@@ -18,6 +18,11 @@ namespace TestTask.Cars
             }
         }
 
+        private void Awake()
+        {
+            _ = CarSwitcher;
+        }
+
         public void ChoosePreviousCar()
         {
             CarSwitcher.ChoosePreviousCar();

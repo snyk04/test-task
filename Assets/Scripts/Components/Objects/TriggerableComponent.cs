@@ -13,6 +13,10 @@ namespace TestTask.Objects
             }
         }
 
+        private void Awake()
+        {
+            _ = Triggerable;
+        }
         private void OnTriggerEnter(Collider other)
         {
             _triggerable.OnTriggerEnter(other);
