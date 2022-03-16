@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+﻿using TestTask.Cars;
+using UnityEngine;
 using UnityEngine.UI;
 
-namespace TestTask.Cars
+namespace TestTask.UserInterface
 {
     public sealed class CarSwitcherVisualComponent : MonoBehaviour
     {
