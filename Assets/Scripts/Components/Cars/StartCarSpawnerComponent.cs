@@ -11,12 +11,12 @@ namespace TestTask.Cars
 
         private void Start()
         {
-            SpawnCar(CarIdTransmitter.CarId, _carPosition, Quaternion.Euler(_carRotation));
-        }
-
-        private void SpawnCar(int carId, Vector3 carPosition, Quaternion carRotation)
-        {
-            Instantiate(_carPrefabs[carId], carPosition, carRotation, _carContainer);
+            Instantiate(
+                _carPrefabs[CarIdTransmitter.CarId],
+                _carPosition, 
+                Quaternion.Euler(_carRotation),
+                _carContainer
+                );
         }
     }
 }
